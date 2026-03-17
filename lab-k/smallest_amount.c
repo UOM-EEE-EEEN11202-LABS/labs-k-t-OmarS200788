@@ -12,6 +12,18 @@ int main(void) {
   int num_fifties, num_twenties, num_tens, num_fives, num_ones;
 
   // Your code below here
+  num_fifties = starting_amount/50;
+  starting_amount = starting_amount - num_fifties*50;
+  num_twenties = starting_amount/20;
+  starting_amount = starting_amount - num_twenties*20;
+  num_tens = starting_amount/10;
+  starting_amount = starting_amount-num_tens *10;
+  num_fives = starting_amount/5;
+  starting_amount = starting_amount - num_fives * 5;
+  num_ones = starting_amount;
+  starting_amount = num_fives*5 + num_twenties*20 + num_fifties*50+num_tens*10 + starting_amount;
+
+
 
   // Display results
   printf("Starting amount in pounds: %d\n", starting_amount);
